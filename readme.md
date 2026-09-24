@@ -1,4 +1,6 @@
-S1 Recruitment System Manager
+**S1 Recruitment System Manager**
+
+
 S1 Recruitment System Manager is a simple applicant tracking system for HR teams, recruiters, and consulting companies.
 
 It helps manage companies, jobs, candidates, applications, interviews, reports, uploaded documents, and basic system settings.
@@ -7,9 +9,10 @@ The project has two parts:
 
 Laravel 11 backend API
 Vue 2 frontend single-page app
+
 Authentication uses Laravel Sanctum API bearer tokens.
 
-Main Features
+**Main Features**
 Public job listing page
 Candidate registration and login
 Candidate profile with document upload
@@ -34,7 +37,9 @@ Clean BootstrapVue based admin UI
 vue-select for select boxes
 vue2-datepicker for date and date-time fields
 Highcharts dashboard charts
-Requirements
+
+
+**Requirements**
 Backend:
 
 PHP 8.2 or higher
@@ -51,7 +56,10 @@ The frontend package is configured with:
   "node": ">=20 <23",
   "npm": ">=10"
 }
-Backend Setup
+
+
+**Backend Setup**
+
 Install PHP dependencies from the project root:
 
 composer install
@@ -84,7 +92,10 @@ php artisan storage:link
 Make sure Laravel can write to these folders:
 
 chmod -R 775 storage bootstrap/cache
-Frontend Setup
+
+**Frontend Setup**
+
+
 Go to the frontend folder:
 
 cd front
@@ -99,7 +110,11 @@ VUE_APP_DEV_SERVER_PORT=8080
 Install frontend dependencies:
 
 npm install
-Run Locally
+
+
+**Run Locally**
+
+
 Start the Laravel backend from the project root:
 
 php artisan serve
@@ -115,19 +130,23 @@ Frontend URL:
 http://localhost:8080
 If you changed VUE_APP_DEV_SERVER_PORT, use that port instead.
 
-Default Login
+**Default Login**
+
 After running seeders, use this admin account:
 
 Email: admin@admin.com
 Password: password
-Authentication Notes
+
+**Authentication Notes**
+
 This project uses Laravel Sanctum API bearer tokens.
 
 Passport is not used anymore.
 
 The frontend stores the authenticated user and token in browser storage and sends the token with API requests.
 
-Settings Files
+**Settings Files**
+
 Runtime app settings are stored in:
 
 public/settings.json
@@ -140,7 +159,9 @@ text_logo_part_one and text_logo_part_two control logo text
 home_page_title controls the public jobs page title
 job_application_number_prefix controls generated application numbers
 user_has_to_verify_email_after_register controls candidate email verification
-Email Setup
+
+**Email Setup** 
+
 Email is used for:
 
 Candidate email verification
@@ -155,7 +176,10 @@ MAIL_USERNAME=null
 MAIL_PASSWORD=null
 MAIL_FROM_ADDRESS=hello@example.com
 MAIL_FROM_NAME="${APP_NAME}"
-Production Build
+
+
+**Production Build**
+
 Build the frontend:
 
 cd front
@@ -165,7 +189,10 @@ The build command writes compiled frontend assets into Laravel public/.
 For production, point the web server document root to:
 
 public/
-Helpful Commands
+
+
+**Helpful Commands**
+
 Clear Laravel cache:
 
 php artisan optimize:clear
@@ -175,7 +202,11 @@ php artisan test
 Optional local asset helper:
 
 php artisan ats:make-symbolic-link
-Troubleshooting
+
+
+**Troubleshooting**
+
+
 If the frontend still calls http://localhost:8000:
 
 Check front/.env
@@ -198,12 +229,19 @@ Run npm install inside the front folder
 License
 This project is open-source under the MIT license.
 
-Screenshots
-Admin Dashboard
-Admin Dashboard
+**Screenshots** 
 
 Login
-Login Screen
+<img width="1024" height="554" alt="image" src="https://github.com/user-attachments/assets/1eef9d82-e486-4370-956a-24b5bb146b60" />
 
-Public Jobs Page
-Public Jobs Page
+Login Screen
+<img width="1024" height="554" alt="image" src="https://github.com/user-attachments/assets/754af31a-a906-4cbd-b1c3-dc56d0ceed40" />
+
+
+
+
+
+**Public Jobs Page** 
+Public Jobs Page 
+<img width="1024" height="554" alt="image" src="https://github.com/user-attachments/assets/14ce08ff-7992-41f2-80b0-27e58d1a0acc" />
+
